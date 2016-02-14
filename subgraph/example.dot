@@ -23,4 +23,5 @@ digraph G {
     "urgence" -> "DoctorBernard";
     "DoctorBernard";
   }
+  "CHUS" -> "urgence" [label="Link", color=red, constraint=false]
 }
