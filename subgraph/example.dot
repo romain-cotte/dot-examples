@@ -1,0 +1,26 @@
+digraph G {
+  subgraph cluster_0 {
+    node [style=filled];
+    label = "Documents";
+    color=blue;
+    "CHUS" -> "Laboratoires";
+    "Laboratoires" -> "Microbio";
+    "Laboratoires" -> "Hémato";
+    "Microbio" -> "Strep";
+    "Hémato" -> "VIH";
+    "Hémato" -> "Potassium";
+    "VIH";
+    "Potassium";
+    "Strep";
+  }
+  subgraph cluster_1 {
+    node [style=filled];
+    label = "Users";
+    color=blue;
+    "All" -> "cardiologie";
+    "All" -> "urgence";
+    "cardiologie" -> "DoctorBernard";
+    "urgence" -> "DoctorBernard";
+    "DoctorBernard";
+  }
+}
