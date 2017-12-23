@@ -7,4 +7,7 @@ ex1:
 subgraph:
 	dot -Tpng subgraph/example.dot > subgraph/example.png
 
-.PHONY: ex1 subgraph
+same_label:
+	dot -Tpng same_label/graph.dot > same_label/graph.png
+
+.PHONY: ex1 subgraph same_label

@@ -1,0 +1,9 @@
+strict graph G {
+  1 [label="A"];
+  2 [label="B"];
+  3 [label="B"];
+  4 [label="A"];
+  1 -- 2;
+  2 -- 3;
+  3 -- 4;
+}
