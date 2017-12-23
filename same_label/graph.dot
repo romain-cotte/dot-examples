@@ -1,3 +1,5 @@
+# example taken from https://stackoverflow.com/questions/10579041/graphviz-create-new-node-with-this-same-label
+
 strict graph G {
   1 [label="A"];
   2 [label="B"];

@@ -1,9 +1,10 @@
 digraph G {
   subgraph cluster_0 {
     node [style=filled];
+    node_CHUS [label="CHUS"];
     label = "Documents";
     color=blue;
-    "CHUS" -> "Laboratoires";
+    node_CHUS -> "Laboratoires";
     "Laboratoires" -> "Microbio";
     "Laboratoires" -> "Hémato";
     "Microbio" -> "Strep";
@@ -23,5 +24,5 @@ digraph G {
     "urgence" -> "DoctorBernard";
     "DoctorBernard";
   }
-  "CHUS" -> "urgence" [label="Link", color=red, constraint=false]
+  node_CHUS -> "urgence" [label="Link", color=red, constraint=false]
 }
