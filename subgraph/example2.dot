@@ -1,0 +1,52 @@
+digraph Engine {
+subgraph cluster_0 {
+node [style=filled];
+label = "Users";
+color=blue;
+"sub_Arthur H" [label="Arthur H"];
+"sub_Elise C" [label="Elise C"];
+"sub_Hugo P" [label="Hugo P"];
+"sub_Non doctors" -> "sub_Hugo P";
+"sub_Non doctors" -> "sub_Arthur H";
+"sub_Non doctors" -> "sub_Elise C";
+"sub_Doctors" -> "sub_Hugo P";
+"sub_Doctors" -> "sub_Arthur H";
+"sub_Granit" -> "sub_Hugo P";
+"sub_Magog" -> "sub_Non doctors";
+"sub_CHUS" -> "sub_Non doctors";
+"sub_CHUS" -> "sub_Doctors";
+"sub_All hospitals" -> "sub_Granit";
+"sub_All hospitals" -> "sub_Magog";
+"sub_All hospitals" -> "sub_CHUS";
+}
+subgraph cluster_1 {
+node [style=filled];
+label = "Documents";
+color=blue;
+"res_VIH" [label="VIH"];
+"res_Examen" [label="Examen"];
+"res_Examen clinique" [label="Examen clinique"];
+"res_Examen dentaire" [label="Examen dentaire"];
+"res_IRM" [label="IRM"];
+"res_X-RAy" [label="X-RAy"];
+"res_Cancer" [label="Cancer"];
+"res_Sante dentaire" -> "res_Examen dentaire";
+"res_Sante mentale" -> "res_Examen";
+"res_Sante mentale" -> "res_Examen clinique";
+"res_Radiology" -> "res_IRM";
+"res_Radiology" -> "res_X-RAy";
+"res_BloodTest" -> "res_Cancer";
+"res_Evaluation" -> "res_Sante dentaire";
+"res_Evaluation" -> "res_Sante mentale";
+"res_Evalu" -> "res_Radiology";
+"res_Evalu" -> "res_BloodTest";
+"res_Visit" -> "res_Evaluation";
+"res_Vis" -> "res_Evalu";
+"res_Pat" -> "res_Vis";
+"res_Patient" -> "res_Visit";
+"res_Magog" -> "res_Pat";
+"res_CHUS" -> "res_Patient";
+"res_All-Hsopital" -> "res_Magog";
+"res_All-Hsopital" -> "res_CHUS";
+}
+}

@@ -1,0 +1,10 @@
+digraph my_graph {
+  0->1 [label="4"];
+  0->2 [label="6"];
+  1->3 [label="3"];
+  2->1 [label="4"];
+  2->3 [label="4"];
+  2->4 [label="3"];
+  3->5 [label="7"];
+  4->5 [label="5"];
+}
