@@ -9,10 +9,21 @@ ex2:
 	neato -Tpng ex2/example.dot > ex2/example-neato.png
 	twopi -Tpng ex2/example.dot > ex2/example-twopi.png
 
-digraph:
-	dot -Tpng digraph/example.dot > digraph/example.png
-	neato -Tpng digraph/example.dot > digraph/example-neato.png
-	twopi -Tpng digraph/example.dot > digraph/example-twopi.png
+digraph_test:
+	dot -Tpng digraph-test/example.dot > digraph-test/example.png
+
+digraph1:
+	dot -Tpng digraph1/example.dot > digraph1/example.png
+	neato -Tpng digraph1/example.dot > digraph1/example-neato.png
+	twopi -Tpng digraph1/example.dot > digraph1/example-twopi.png
+	circo -Tpng digraph1/example.dot > digraph1/example-circo.png
+	fdp -Tpng digraph1/example.dot > digraph1/example-fdp.png
+
+digraph2:
+	dot -Tpng digraph2/example.dot > digraph2/example.png
+	neato -Tpng digraph2/example.dot > digraph2/example-neato.png
+	twopi -Tpng digraph2/example.dot > digraph2/example-twopi.png
+	circo -Tpng digraph2/example.dot > digraph2/example-circo.png
 
 subgraph:
 	dot -Tpng subgraph/example.dot > subgraph/example.png
@@ -21,4 +32,4 @@ subgraph:
 same_label:
 	dot -Tpng same_label/graph.dot > same_label/graph.png
 
-.PHONY: ex1 ex2 subgraph same_label digraph
+.PHONY: ex1 ex2 subgraph same_label digraph1 digraph2
