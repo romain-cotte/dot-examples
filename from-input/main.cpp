@@ -64,15 +64,33 @@ typedef vector<vi> vvi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
 
-int N;
+int N, M;
+vii G[200005];
+int visited[200005];
+
+void dfs(int u, int p = -1) {
+  if (visited[u]) return;
+  visited[u] = 1;
+  for (auto [v, w]: G[u]) if (v != p) {
+    printf("  %d -- %d [label=\"%d\"]\n", u, v, w);
+    dfs(v, u);
+  }
+}
 
 int main(int argc, const char **argv) {
-  scanf("%d", &N);
+  scanf("%d%d", &N, &M);
   printf("strict graph G {\n");
-  for (int i = 0; i < N-1; ++i) {
+  for (int i = 0; i < M; ++i) {
     int u, v, w;
     scanf("%d%d%d", &u, &v, &w);
-    printf("  %d -- %d [label=\"%d\"]\n", u, v, w);
+    G[u].push_back(ii(v, w));
+    G[v].push_back(ii(u, w));
+  }
+  for (int u = 1; u <= N; ++u) {
+    printf("  %d;\n", u);
+  }
+  for (int u = 1; u <= N; ++u) {
+    dfs(u);
   }
   printf("}\n");
   return 0;

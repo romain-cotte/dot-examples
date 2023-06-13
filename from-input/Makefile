@@ -11,6 +11,7 @@ compile_main:
 main: compile_main
 	./main < input | tee main.dot
 	dot -Tpng main.dot > main.png
+	neato -Gepsilon=0.005 -Tpng main.dot > main-neato.png
 
 clean:
 	rm -rf *.o main

@@ -9,6 +9,11 @@ ex2:
 	neato -Tpng ex2/example.dot > ex2/example-neato.png
 	twopi -Tpng ex2/example.dot > ex2/example-twopi.png
 
+ex3:
+	dot -Tpng ex3/example.dot > ex3/example.png
+	neato -Tpng ex3/example.dot > ex3/example-neato.png
+	twopi -Tpng ex3/example.dot > ex3/example-twopi.png
+
 digraph_test:
 	dot -Tpng digraph-test/example.dot > digraph-test/example.png
 
@@ -32,4 +37,4 @@ subgraph:
 same_label:
 	dot -Tpng same_label/graph.dot > same_label/graph.png
 
-.PHONY: ex1 ex2 subgraph same_label digraph1 digraph2
+.PHONY: ex1 ex2 ex3 subgraph same_label digraph1 digraph2
